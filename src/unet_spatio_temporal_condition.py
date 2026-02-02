@@ -21,6 +21,9 @@ logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 @dataclass
 class UNetSpatioTemporalConditionOutput(BaseOutput):
     """
+    这是一个“标准化的模型输出容器”：
+    用来包装 UNetSpatioTemporalConditionModel 的输出结果（sample 张量），让下游代码用得更统一、更安全、更好扩展。
+    
     The output of [`UNetSpatioTemporalConditionModel`].
 
     Args:
